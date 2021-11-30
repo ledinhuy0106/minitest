@@ -62,7 +62,7 @@ public class StudentServlet extends HttpServlet {
         }
     }
 
-    private void editProDuct(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    private void editSutudent(HttpServletRequest request, HttpServletResponse response) throws IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         double math= Double.parseDouble(request.getParameter("math"));
@@ -72,7 +72,7 @@ public class StudentServlet extends HttpServlet {
         response.sendRedirect("/students");
     }
 
-    private void deleteProduct(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    private void deleteStudent(HttpServletRequest request, HttpServletResponse response) throws IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         this.studentService.delete(id);
         response.sendRedirect("/students");
